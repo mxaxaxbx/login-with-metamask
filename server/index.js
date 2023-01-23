@@ -15,7 +15,7 @@ const port = 4000;
 
 app.use(cors());
 
-const isValidAddress = (address) => Web3.default.utils.isAddress(address);
+const isValidAddress = (address) => Web3.utils.isAddress(address);
 
 const makeId = (length) => {
     let result = '';
@@ -64,7 +64,7 @@ const isValidSignature = ({address, signature, messageToSign}) => {
 
     const signingAddress = recoverPersonalSignature({
         data: messageToSign,
-        sig: signature
+        signature
     });
 
     if (!signingAddress || typeof signingAddress !== 'string')

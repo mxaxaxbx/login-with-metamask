@@ -1,4 +1,4 @@
-import styles from '../styles/connect-wallet.module.csss';
+import styles from '../styles/connect-wallet.module.css';
 
 const ConnectWalletButton = ({
     onPressLogout,
@@ -20,7 +20,7 @@ const ConnectWalletButton = ({
                     <div> Loading... </div>
                 </button>
             ) : (
-                <button onclick={onPressConnect} className={styles["connect-wallet"]}>
+                <button onClick={onPressConnect} className={styles["connect-wallet"]}>
                     Connect wallet
                 </button>
             )}
